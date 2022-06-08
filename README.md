@@ -1,5 +1,9 @@
 # Py Tricks
 
+## Python Tutorial Docs
+
+- [Link](./doc/README.md)
+
 ## Installation
 
 From the source directory run the following commands
