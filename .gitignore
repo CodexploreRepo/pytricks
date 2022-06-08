@@ -10,7 +10,8 @@
 node_modules/
 dist/
 venv/
-
+# package metadata
+py_tricks.egg-info
 # Compiled Java class files
 *.class
 
