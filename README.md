@@ -1,8 +1,8 @@
-# Py Tricks
+# Python Tricks
 
-## Python Tutorial Docs
+## Tutorial
 
-- [Link](./doc/README.md)
+- [Docs](./doc/README.md)
 
 ## Installation
 
