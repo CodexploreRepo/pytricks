@@ -23,8 +23,7 @@ The following commands shall be ran **after activating the virtual environment**
 - `pre-commit install` for installing the precommit hook
 
 For the extra modules, which are not a standard pip modules (either from your own `src` or from any github repo)
-
-- `-e` means editable at the corresponding folder location, not in `venv`
+- `-e` means installing a project in editable mode, thus any local modifications made to the code will take effect without reinstallation.
 - `pip install -e .` for the files/modules in `src` to be accessed as a package. This is accompanied with `setup.py` and `setup.cfg` files
 - `pip install -e ./upskills_submodules/tbocr` for the `tbocr` package
 
