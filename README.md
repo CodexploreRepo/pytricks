@@ -27,10 +27,18 @@ For the extra modules, which are not a standard pip modules (either from your ow
 - `pip install -e .` for the files/modules in `src` to be accessed as a package. This is accompanied with `setup.py` and `setup.cfg` files
 - `pip install -e ./upskills_submodules/tbocr` for the `tbocr` package
 
-#### Git Submodule Config
-
+#### Git Submodule Setup & Config
+If you want to adding another existing Git repository as a submodule of your current repository that we’re working on. 
 The following commands shall be ran for importing the `tbocr` repository into the project files
 
 - `git submodule init`
 - `git submodule update`
-- `git submodule add some_module`
+- `$cd folder_contains_submodules`
+- `git submodule add some_module_name` for example: `git submodule add https://github.com/chaconinc/DbConnector`
+
+You should notice the new .gitmodules file. This is a configuration file that stores the mapping between the project’s URL and the local subdirectory you’ve pulled it into:
+```git
+[submodule "to_folder_contains_submodules/DbConnector"]
+	path = folder_contains_submodules/DbConnector
+	url = https://github.com/chaconinc/DbConnector
+```
