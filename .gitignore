@@ -10,8 +10,7 @@
 node_modules/
 dist/
 venv/
-# package metadata
-py_tricks.egg-info
+
 # Compiled Java class files
 *.class
 
@@ -53,3 +52,23 @@ Thumbs.db
 *.mov
 *.wmv
 
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+compiled/
