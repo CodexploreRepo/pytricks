@@ -26,5 +26,5 @@ class ExampleDataClass:
 - Checking the type
 ```
 if not isinstance(savepath, pathlib.Path):
-          savepath = pathlib.Path(savepath)
+    savepath = pathlib.Path(savepath)
 ```
