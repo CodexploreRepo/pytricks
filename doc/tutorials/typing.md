@@ -24,7 +24,25 @@ class ExampleDataClass:
 ```
 
 - Checking the type
-```
+```Python
 if not isinstance(savepath, pathlib.Path):
     savepath = pathlib.Path(savepath)
+```
+
+- Return multiple file -> Need NameTuple
+
+```Python
+from typing import NamedTuple
+def two_outputs(
+    text: str,
+) -> NamedTuple(
+    "Outputs",
+    [
+        ("output_one", str),  # Return parameters
+        ("output_two", str),
+    ],
+):
+
+    pass
+    return (o1, o2)
 ```
