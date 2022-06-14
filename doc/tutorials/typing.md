@@ -12,10 +12,14 @@ import pathlib
 class ExampleDataClass:
     expand_ratio: float = 0
     scanned_page_idxs: List[int] = [] #List of integer, by default is empty list
-    img: Optional[np.ndarray] = None #Optional arg -> Same as Union[int, None]
-    savepath: Union[str, pathlib.Path]
     
-    # 2 String Option
+    # "Optional" example
+    img: Optional[np.ndarray] = None #Optional arg -> Same as Union[int, None]
+    
+    # "Union" example 
+    savepath: Union[str, pathlib.Path] = 'datd/sample.pdf'
+    
+    # "Literal" example
     camelot_flavor: Literal["lattice", "stream"] = "stream"
      
 ```
