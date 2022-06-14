@@ -17,9 +17,14 @@ class ExampleDataClass:
     img: Optional[np.ndarray] = None #Optional arg -> Same as Union[int, None]
     
     # "Union" example 
-    savepath: Union[str, pathlib.Path] = 'datd/sample.pdf'
+    savepath: Union[str, pathlib.Path]
     
     # "Literal" example
     camelot_flavor: Literal["lattice", "stream"] = "stream"
-     
+```
+
+- Checking the type
+```
+if not isinstance(savepath, pathlib.Path):
+          savepath = pathlib.Path(savepath)
 ```
