@@ -8,9 +8,6 @@ from typing import Union, Optional, Literal
 import numpy as np
 import pathlib
 
-def to_json(self, savepath: Union[str, pathlib.Path]) -> None:
-  pass
-  
 @dataclass
 class ExampleDataClass:
     expand_ratio: float = 0
