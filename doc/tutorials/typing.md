@@ -42,7 +42,6 @@ def two_outputs(
         ("output_two", str),
     ],
 ):
-
     pass
     return (o1, o2)
 ```
