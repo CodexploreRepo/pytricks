@@ -4,6 +4,7 @@
 - Install pillow: `pip install Pillow`
 - **Open Image** using `PIL.Image.open()`:
   - `.open()` function to read the image from the file  
+    -  `PIL.Image` should open a file type object. Once opened, then you'll have a `PIL.Image.Image` object:
   - `.load()` to read the image into memory so that the file can now be closed. 
   - You use a with statement to create a context manager to ensure the file is closed as soon as it’s no longer needed.
   ```Python
@@ -13,7 +14,7 @@
     img.load()
 
   >>> type(img) #<class 'PIL.JpegImagePlugin.JpegImageFile'>
-  >>> isinstance(img, Image.Image) #True
+  >>> isinstance(img, PIL.Image.Image) #True
 
   print(img.size, img.mode, img.format) #(1920, 1273), 'RGB' 'JPEG'
   img.show()  #display the image using .show()
