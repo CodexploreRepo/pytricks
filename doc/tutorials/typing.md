@@ -1,18 +1,21 @@
 # Typing
 - [Basic Typing](#basic-typing)
-- [Union, Optional, Literal](#union-optional-literal)
-- [`NameTuple`](#nametuple)
-- [`isinstance`](#isinstance)
+- [`Union`, `Optional`, `Literal`](#union-optional-literal)
+- [`NameTuple` Multiple Returns](#nametuple)
+- [`isinstance` Type Check](#isinstance)
 
 
-## Basic Typing:
+## Basic Typing
 ```Python
 from typing import List, Tuple
 from typing import Union, Optional, Literal
 
 import numpy as np
 import pathlib
+```
 
+## Union, Optional, Literal
+```Python
 @dataclass
 class ExampleDataClass:
     expand_ratio: float = 0
@@ -27,7 +30,7 @@ class ExampleDataClass:
     # "Literal" example
     camelot_flavor: Literal["lattice", "stream"] = "stream"
 ```
-## Union, Optional, Literal
+
 
 ## `isinstance`
 - Checking the type
