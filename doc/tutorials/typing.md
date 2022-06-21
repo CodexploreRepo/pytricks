@@ -1,5 +1,6 @@
 # Typing
 - [Basic Typing](#basic-typing)
+- [Union, Optional, Literal](#union-optional-literal)
 - [`NameTuple`](#nametuple)
 - [`isinstance`](#isinstance)
 
@@ -26,6 +27,8 @@ class ExampleDataClass:
     # "Literal" example
     camelot_flavor: Literal["lattice", "stream"] = "stream"
 ```
+## Union, Optional, Literal
+
 ## `isinstance`
 - Checking the type
 ```Python
