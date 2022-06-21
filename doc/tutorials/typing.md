@@ -1,6 +1,7 @@
 # Typing
 - [Basic Typing](#basic-typing)
 - [`Union`, `Optional`, `Literal`](#union-optional-literal)
+- [ `TypedDict` Type Hints for Dictionaries ](#typeddict)
 - [`NameTuple` Multiple Returns](#nametuple)
 - [`isinstance` Type Check](#isinstance)
 
@@ -31,12 +32,33 @@ class ExampleDataClass:
     camelot_flavor: Literal["lattice", "stream"] = "stream"
 ```
 
+## `TypedDict`
+- How to define `TypedDict` class
 
-## `isinstance`
-- Checking the type
 ```Python
-if not isinstance(savepath, pathlib.Path):
-    savepath = pathlib.Path(savepath)
+from typing import TypedDict
+
+class Movie(TypedDict):
+    name: str
+    year: int
+```
+- Here is an example of how the type Movie can be used:
+```Python
+movie: Movie = {'name': 'Blade Runner',
+                'year': 1982}
+
+def record_movie(movie: Movie) -> None: 
+    #do something here
+    pass
+
+record_movie({'name': 'Blade Runner', 'year': 1982})
+
+# an assignment to a variable with a previously declared TypedDict type
+movie: Movie
+#...
+movie = {'name': 'Blade Runner', 'year': 1982}
+
+
 ```
 
 ## `NameTuple`
@@ -55,3 +77,13 @@ def two_outputs(
     pass
     return (o1, o2)
 ```
+
+
+## `isinstance`
+- Checking the type
+```Python
+if not isinstance(savepath, pathlib.Path):
+    savepath = pathlib.Path(savepath)
+```
+
+
