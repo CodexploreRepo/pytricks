@@ -1,6 +1,10 @@
 # Typing
-- Basic Typing:
+- [Basic Typing](#basic-typing)
+- [`NameTuple`](#nametuple)
+- [`isinstance`](#isinstance)
 
+
+## Basic Typing:
 ```Python
 from typing import List, Tuple
 from typing import Union, Optional, Literal
@@ -22,15 +26,15 @@ class ExampleDataClass:
     # "Literal" example
     camelot_flavor: Literal["lattice", "stream"] = "stream"
 ```
-
+## `isinstance`
 - Checking the type
 ```Python
 if not isinstance(savepath, pathlib.Path):
     savepath = pathlib.Path(savepath)
 ```
 
-- Return multiple file -> Need NameTuple
-
+## `NameTuple`
+- Return multiple file -> Need `NameTuple`
 ```Python
 from typing import NamedTuple
 def two_outputs(
