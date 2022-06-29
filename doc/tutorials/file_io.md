@@ -47,3 +47,24 @@ with open("test.txt",'w',encoding = 'utf-8') as f:
 f.readlines()
 #['This is my first file\n', 'This file\n', 'contains three lines\n']
 ```
+
+# Temporary Directory
+- In Python 3, `TemporaryDirectory` from the `tempfile` module can be used.
+```Python
+import tempfile
+
+with tempfile.TemporaryDirectory() as tmpdirname:
+     print('created temporary directory', tmpdirname)
+
+# directory and contents have been removed
+```
+- To manually control when the directory is removed, don't use a context manager, as in the following example:
+```Python
+import tempfile
+
+temp_dir = tempfile.TemporaryDirectory()
+print(temp_dir.name)
+# use temp_dir, and when done:
+temp_dir.cleanup()
+```
+
