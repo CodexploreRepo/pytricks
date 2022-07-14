@@ -6,6 +6,7 @@
   - Open, Read, Write
   - Temporary Directory
 - [Matplotlib](./tutorials/matplotlib.md)
+- [Numpy](./tutorials/numpy.md)
 - [Pathlib](./tutorials/pathlib.md)
 - [Typing](./tutorials/typing.md)
 
