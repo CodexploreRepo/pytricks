@@ -18,7 +18,9 @@ X > 1
 X[X < 1] = -1
 
 ```
-
+## Random
+- Gaussian Distribution: `np.random.randn(input_dim, output_dim)`
+- Uniform Distribution: `np.random.uniform(lower_bound, upper_bound, (tuple_size))`
 ## Matrix multiplication
 - [Dot Product](http://matrixmultiplication.xyz/)
   ```Python
