@@ -1,6 +1,7 @@
 # Inital Setup
 - Set color map: `plt.set_cmap('gray')`
-- Plot marker: `plt.plot(x, y_true, marker='x')`
+- Marker: `plt.plot(x, y_true, marker='x')` with marker options `x`, `.`
+- Color: `plt.scatter(x, y_pred, color='r')`
 - Line Legend: 
 ```Python
 plt.plot(x, y_true, label='function_A')
