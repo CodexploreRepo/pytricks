@@ -1,3 +1,15 @@
+# Inital Setup
+- Set color map: `plt.set_cmap('gray')`
+- Plot marker: `plt.plot(x, y_true, marker='x')`
+- Line Legend: 
+```Python
+plt.plot(x, y_true, label='function_A')
+plt.legend() #to show the legend
+```
+
+
+
+
 # Add Patches on Figure/Image
 ```Python
 from matplotlib.patches import Rectangle
