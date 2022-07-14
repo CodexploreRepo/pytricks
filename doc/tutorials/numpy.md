@@ -14,7 +14,6 @@ X > 1
 #       [False, False],
 #       [False, False]])
 
-
 # Masking
 X[X < 1] = -1
 
