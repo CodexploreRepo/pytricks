@@ -18,6 +18,19 @@ X > 1
 X[X < 1] = -1
 
 ```
+
+## Commonly Used Command
+- `.squeeze()` remove axes of length one from x
+```Python
+x = np.array([[0], [1], [2]])
+#array([[0],
+#       [1],
+#       [2]])
+
+x.squeeze()
+#array([0, 1, 2])
+```
+
 ## Random
 - Gaussian Distribution: `np.random.randn(input_dim, output_dim)`
 - Uniform Distribution: `np.random.uniform(lower_bound, upper_bound, (tuple_size))`
