@@ -3,6 +3,7 @@
 - [`Union`, `Optional`, `Literal`](#union-optional-literal)
 - [ `TypedDict` Type Hints for Dictionaries ](#typeddict)
 - [`NameTuple` Multiple Returns](#nametuple)
+- [`Callable`](#callable)
 - [`isinstance` Type Check](#isinstance)
 
 
@@ -77,8 +78,10 @@ def two_outputs(
     pass
     return (o1, o2)
 ```
-
-
+## `Callable`
+```Python
+from typing import Callable
+```
 ## `isinstance`
 - Checking the type
 ```Python
