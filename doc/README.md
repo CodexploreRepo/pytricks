@@ -1,5 +1,6 @@
 # Python 
 - [Class](./tutorials/class.md)
+- [CUDA](./tutorials/cuda.md)
 - [Debugger](./tutorials/debugger_tips.md)
 - [Image](./tutorials/image.md)
 - [File I/O](./tutorials/file_io.md): 
