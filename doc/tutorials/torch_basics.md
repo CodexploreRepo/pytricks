@@ -78,18 +78,19 @@ x2.add_(x1)
   - Can also be written as `a @ b`, similar to numpy.
 
 ## 4. Dynamic Computation Graph and Backpropagation
+### 4.1. Dynamic computation graph 
 - Given an input $\mathbf{x}$, we define our function by **manipulating** that input, usually by matrix-multiplications with weight matrices and additions with so-called bias vectors.
 - As we manipulate our input, we are automatically creating a **computational graph**.
   - This graph shows how to arrive at our output from our input.
   - PyTorch is a **define-by-run** framework; this means that we can just do our manipulations, and PyTorch will keep track of that graph for us.
   - Thus, we create a `dynamic computation graph` along the way.
 
-**Note:  Why do we want gradients?** 
+### 4.2. Why do we want gradients?
 - Consider that we have defined a function, a neural net, that is supposed to compute a certain output $y$ for an input vector $\mathbf{x}$.
 - We then define an **error measure** that tells us how wrong our network is; how bad it is in predicting output $y$ from input $\mathbf{x}$.
 - Based on this error measure, we can use the gradients to **update** the weights $\mathbf{W}$ that were responsible for the output, so that the next time we present input $\mathbf{x}$ to our network, the output will be closer to what we want.
 
-**Example**
+### 4.3. Example
 - In order to get familiar with the concept of a computation graph, we will create one for the following function:
 $$y = \frac{1}{|x|}\sum_i \left[(x_i + 2)^2 + 3\right]$$
 - You could imagine that $x$ are our parameters, and we want to optimize (either maximize or minimize) the output $y$.
@@ -107,7 +108,7 @@ c = b + 3
 y = c.mean()
 ```
 - Using the statements above, we have created a computation graph that looks similar to the figure below:
-<center style="width: 100%"><img src="https://github.com/PyTorchLightning/lightning-tutorials/raw/main/course_UvA-DL/01-introduction-to-pytorch/pytorch_computation_graph.svg" width="200px"></center>
+<p align="center"><img src="https://github.com/PyTorchLightning/lightning-tutorials/raw/main/course_UvA-DL/01-introduction-to-pytorch/pytorch_computation_graph.svg" width="200px"></p>
 
 - We can perform backpropagation on the computation graph by calling the function `backward()` on the last output, which effectively calculates the gradients for each tensor that has the property `requires_grad=True`:
 - `x.grad` will now contain the gradient $\partial y/ \partial \mathcal{x}$, and this gradient indicates how a change in $\mathbf{x}$ will affect output $y$ given the current input $\mathbf{x}=[0,1,2]$:
@@ -117,10 +118,10 @@ print(x.grad) #tensor([1.3333, 2.0000, 2.6667])
 ```
 
 - We can also verify these gradients by hand. We will calculate the gradients using the chain rule, in the same way as PyTorch did it:
-
+  - Note that we have simplified this equation to index notation, and by using the fact that all operation besides the mean do not combine the elements in the tensor.
+  
 $$\frac{\partial y}{\partial x_i} = \frac{\partial y}{\partial c_i}\frac{\partial c_i}{\partial b_i}\frac{\partial b_i}{\partial a_i}\frac{\partial a_i}{\partial x_i}$$
 
-- Note that we have simplified this equation to index notation, and by using the fact that all operation besides the mean do not combine the elements in the tensor.
 - The partial derivatives are:
 
 $$
