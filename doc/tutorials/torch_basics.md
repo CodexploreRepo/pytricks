@@ -1,4 +1,5 @@
 # Torch Basics
+
 ## 1. Tensor Creation
 * `torch.zeros`: Creates a tensor filled with zeros
 * `torch.ones`: Creates a tensor filled with ones
@@ -146,3 +147,6 @@ $$
 
 - Hence, with the input being $\mathbf{x}=[0,1,2]$ ($\mathbf{a}=[2,3,4]$), our gradients are $\partial y/\partial \mathbf{x}=[4/3,2,8/3]$.
 - The previous code cell should have printed the same result.
+
+## Readings
+- [PyTorch internals](https://safe.menlosecurity.com/http://blog.ezyang.com/2019/05/pytorch-internals/)
