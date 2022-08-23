@@ -6,6 +6,7 @@
 - [File I/O](./tutorials/file_io.md): 
   - Open, Read, Write
   - Temporary Directory
+- [Object Storage](./object_storage.md)
 - [Matplotlib](./tutorials/matplotlib.md)
 - [Numpy](./tutorials/numpy.md)
 - [Pathlib](./tutorials/pathlib.md)
