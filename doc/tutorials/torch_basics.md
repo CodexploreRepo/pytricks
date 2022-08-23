@@ -24,7 +24,8 @@ print("Size:", dim1, dim2, dim3)
 #Size: 2 3 4
 ```
 
-### 1.2. Tensor to Numpy, and Numpy to Tensor
+### 1.2. Numpy and Tensor conversion
+#### 1.2.1. Numpy to Tensor
 - Tensors can be converted to numpy arrays, and numpy arrays back to tensors.
 - To transform a numpy array into a tensor, we can use the function `torch.from_numpy`:
 ```Python
@@ -34,6 +35,15 @@ tensor = torch.from_numpy(np_arr)
 print("Numpy array:", np_arr)
 print("PyTorch tensor:", tensor)
 ```
+- `map()` function
+```Python
+import torch
+
+x_train, y_train, x_valid, y_valid = map(
+    torch.tensor, (x_train, y_train, x_valid, y_valid)
+)
+```
+#### 1.2.2. Tensor to Numpy
 - To transform a PyTorch tensor back to a numpy array, we can use the function `.numpy()` on tensors:
   - The conversion of tensors to numpy require the tensor to be on the CPU, and not the GPU. In case you have a tensor on GPU, you need to call `.cpu()` on the tensor beforehand. Hence, you get a line like `np_arr = tensor.cpu().numpy()`. 
 ```Python
