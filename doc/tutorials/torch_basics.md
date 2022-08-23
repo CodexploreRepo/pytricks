@@ -6,7 +6,7 @@
 * `torch.randn`: Creates a tensor with random values sampled from a normal distribution with mean 0 and variance 1
 * `torch.arange`: Creates a tensor containing the values $N,N+1,N+2,...,M$
 * `torch.Tensor` (input list): Creates a tensor from the list elements you provide
-### 1.1. Size
+### 1.1. Size & Dimension
 - You can obtain the shape of a tensor in the same way as in numpy (`x.shape`), or using the `.size` method
 
 ```Python
@@ -23,7 +23,10 @@ print("Size:", dim1, dim2, dim3)
 #Size: torch.Size([2, 3, 4])
 #Size: 2 3 4
 ```
-
+- **dim**
+```Python
+x_train.ndim, y_train.ndim #to check if x_train/y_train has how many dimensions
+```
 ### 1.2. Numpy and Tensor conversion
 #### 1.2.1. Numpy to Tensor
 - Tensors can be converted to numpy arrays, and numpy arrays back to tensors.
