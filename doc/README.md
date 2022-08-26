@@ -16,3 +16,4 @@
   - [Wandb](./tutorials/wandb.md)
 # Pytorch
 - [Basics](./tutorials/torch_basics.md)
+- [Models](./tutorials/torch_models.md)
