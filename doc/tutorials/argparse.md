@@ -31,3 +31,12 @@ if __name__ == "__main__":
     print(cylinder_volume(args.get('radius', 2), args["height"]))
 
 ```
+- Create `args` using `argparse.NameSpace`
+
+```Python
+from argparse import Namespace  # you'll need this
+
+args = Namespace()  # edit this
+args.fc1 = 512
+args.fc_dropout = 0.3
+```
