@@ -6,6 +6,13 @@ layers, which can improve
 [training stability and loss conditioning](https://myrtle.ai/how-to-train-your-resnet-7-batch-norm/)
 - Add a linear "skip connection" layer that is applied to the inputs and whose outputs are added directly to the last layer's outputs
 
+## `torch.nn`
+- Batch Norm: `nn.BatchNorm1d()`,  `nn.BatchNorm2d()` &#8594; same shape as input
+  - There is no mathematical difference between them, except the dimension of input data. 
+  - nn.BatchNorm2d only accepts 4D inputs 
+  - nn.BatchNorm1d accepts 2D or 3D inputs. And because of that, in features which has been constructed of nn.Conv2d layers, inputs are `[batch, ch, h, w]` (4D) we need **BatchNorm2d** and in classifier we have Linear layers which accept `[batch, length]` or `[batch, channel, length]` (2D/3D) so we need **BatchNorm1d**.
+- Flatten: `nn.Flatten()`
+
 ## Torch Function
 - `import torch.nn.functional as F` for stateless computation
   - includes: `F.cross_entropy`, `F.log_softmax` 
