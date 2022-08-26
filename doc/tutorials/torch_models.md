@@ -57,10 +57,12 @@ def push_to_device(tensor):
 
 ```Python
 from torch import optim
-
-
 def configure_optimizer(model: nn.Module) -> optim.Optimizer:
     return optim.Adam(model.parameters(), lr=3e-4)
+
+def accuracy(out: torch.Tensor, yb: torch.Tensor) -> torch.Tensor:
+    preds = torch.argmax(out, dim=1)
+    return (preds == yb).float().mean()
     
 def fit(self: nn.Module, datamodule):
     datamodule.prepare_data() #to download the data
@@ -110,7 +112,6 @@ FC1_DIM = 1024
 FC2_DIM = 128
 FC_DROPOUT = 0.5
 
-
 class MLP(nn.Module):
     """Simple MLP suitable for recognizing single characters."""
 
@@ -119,7 +120,6 @@ class MLP(nn.Module):
         data_config: Dict[str, Any],
         args: argparse.Namespace = None,
     ) -> None:
-
         super().__init__()
         self.args = vars(args) if args is not None else {}
         self.data_config = data_config
@@ -155,7 +155,6 @@ class MLP(nn.Module):
         return parser
 ```
 - If you want to make an `nn.Module` that can have different depths, check out the [`nn.Sequential`](https://pytorch.org/docs/stable/generated/torch.nn.Sequential.html) class.
-
 ```Python
 class NewModel(nn.Module):
     def __init__(self):  # add args and kwargs here as you like
@@ -171,4 +170,29 @@ class NewModel(nn.Module):
         )
     def forward(self, xb):  
         return self.layers(xb)
+```
+### Putting Everything Together
+```Python
+# Assign fit function into the MLP model class
+MLP.fit = fit 
+
+# Define the model with args & data_config
+from argparse import Namespace 
+args = Namespace()  
+args.fc1 = 512
+args.fc_dropout = 0.3
+
+digits_to_9 = list(range(10))
+data_config = {"input_dims": (784,), "mapping": {digit: str(digit) for digit in digits_to_9}}
+
+model = MLP(data_config, args=args)
+model.to(device)
+
+epochs = 4  # used in fit
+bs = 16  # used by the DataModule
+
+# create a datamodule object with batch size
+datamodule = MNISTDataModule(dir=path, bs=bs)
+
+model.fit(datamodule=datamodule)
 ```
