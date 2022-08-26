@@ -12,6 +12,6 @@
 - [Pathlib](./tutorials/pathlib.md)
 - [Typing](./tutorials/typing.md)
 - Utils
-  - [Wandb](./tutorial/wandb.md)
+  - [Wandb](./tutorials/wandb.md)
 # Pytorch
 - [Basics](./tutorials/torch_basics.md)
