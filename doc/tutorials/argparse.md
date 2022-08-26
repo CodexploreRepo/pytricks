@@ -39,4 +39,6 @@ from argparse import Namespace  # you'll need this
 args = Namespace()  # edit this
 args.fc1 = 512
 args.fc_dropout = 0.3
+
+# Namespace(fc1=512, fc_dropout=0.3)
 ```
