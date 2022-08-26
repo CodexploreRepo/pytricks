@@ -14,6 +14,13 @@ from typing import Union, Optional, Literal
 
 import numpy as np
 import pathlib
+
+def __init__(
+        self,
+        data_config: Dict[str, Any], #Dict Type
+        args: argparse.Namespace = None,
+        path: Union[pathlib, str]
+    )
 ```
 
 ## Union, Optional, Literal
