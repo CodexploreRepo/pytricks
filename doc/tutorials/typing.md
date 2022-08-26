@@ -9,7 +9,7 @@
 
 ## Basic Typing
 ```Python
-from typing import List, Tuple
+from typing import List, Tuple, Dict, Any
 from typing import Union, Optional, Literal
 
 import numpy as np
