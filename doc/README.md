@@ -11,6 +11,7 @@
 - [Numpy](./tutorials/numpy.md)
 - [Pathlib](./tutorials/pathlib.md)
 - [Typing](./tutorials/typing.md)
-
+- Utils
+  - [Wandb](./tutorial/wandb.md)
 # Pytorch
 - [Basics](./tutorials/torch_basics.md)
