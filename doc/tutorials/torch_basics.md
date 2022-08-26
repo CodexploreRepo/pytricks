@@ -24,7 +24,7 @@ print("Size:", dim1, dim2, dim3)
 #Size: torch.Size([2, 3, 4])
 #Size: 2 3 4
 ```
-- **dim**
+- **ndim**
 ```Python
 x_train.ndim, y_train.ndim #to check if x_train/y_train has how many dimensions
 ```
