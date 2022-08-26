@@ -13,6 +13,7 @@
 - [Typing](./tutorials/typing.md)
 - Utils
   - [Argparse](./tutorials/argparse.md)
+  - [Ipython Magic Functions](./tutorials/ipython_magic_functions.md)
   - [Wandb](./tutorials/wandb.md)
 # Pytorch
 - [Basics](./tutorials/torch_basics.md)
