@@ -2,6 +2,7 @@
 - [Class](./tutorials/class.md)
 - [CUDA](./tutorials/cuda.md)
 - [Debugger](./tutorials/debugger_tips.md)
+- [Dict](./tutorials/dict.md)
 - [Image](./tutorials/image.md)
 - [File I/O](./tutorials/file_io.md): 
   - Open, Read, Write
