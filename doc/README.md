@@ -11,6 +11,7 @@
 - [Object Storage](./object_storage.md)
 - [Matplotlib](./tutorials/matplotlib.md)
 - [Numpy](./tutorials/numpy.md)
+- [Pandas](./tutorials/pandas.md)
 - [Pathlib](./tutorials/pathlib.md)
 - [Typing](./tutorials/typing.md)
 - Utils
