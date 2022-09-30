@@ -21,3 +21,4 @@
 # Pytorch
 - [Basics](./tutorials/torch_basics.md)
 - [Models](./tutorials/torch_models.md)
+- [Torch Vision](./tutorials/torch_vision.md)
