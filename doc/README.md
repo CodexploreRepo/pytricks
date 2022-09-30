@@ -20,6 +20,8 @@
   - [Textwrap](./tutorials/textwrap.md)
   - [Wandb](./tutorials/wandb.md)
 # Pytorch
+- [Tips](./tutorials/torch_tips.md)
 - [Basics](./tutorials/torch_basics.md)
 - [Models](./tutorials/torch_models.md)
 - [Torch Vision](./tutorials/torch_vision.md)
+
