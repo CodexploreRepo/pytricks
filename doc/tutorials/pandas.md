@@ -9,6 +9,8 @@
 #drop = True, to not retain the old index as a column
 df = df.reset_index(drop=True)
 ```
+### `nan` values:
+- `df.dropna()`: by default, will drop axis=0 (row), and how='any' &#8594; drop any row if it contains any `nan` value.
 ### Frequently-used commands
 - `df.sample(n=5, random_state=1)`: randomly select 5 samples from the dataframe
 - `df[col].unique().tolist()`: to get List of Unique values in a column
@@ -25,9 +27,13 @@ df = df.reset_index(drop=True)
 - Select with Multiple Conditions: 
   - AND: `df.loc[(df.col_1.isnull())&(df.col2 == 'Mr'), 'col3_name']`
   - OR: `df.loc[(df.col_1.isnull())|(df.col2 == 'Mr'), 'col3_name']`
-## Concat DataFrame
+## Merge & Concat DataFrame
+### Concat
 - Column Concat: `pd.concat([df_1, df_2], axis= 1, ignore_index=True)`
 - Row Concat: `pd.concat([df_1, df_2], axis= 0, ignore_index=True)`
+
+### Merge
+- `df1.merge(df2, left_on='df1_id', right_on='df2_id')`: by default, `how='inner'` join
 ## Save and Load DataFrame
 - Deep copy DataFrame
 ```Python
